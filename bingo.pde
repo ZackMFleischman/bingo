@@ -4,6 +4,10 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
 
+// Reads the "box ideas" from this file (1 per line).
+// NOTE: Need at least 24 ideas in the file or it will crash.
+String fileName = "/Users/zfleischman/ideas.txt";
+
 String fontName = "Osaka";
 
 ControlP5 cp5;
@@ -77,7 +81,7 @@ String getBoxText() {
 
 void loadIdeasFromFile() {
   try {
-    FileInputStream fstream = new FileInputStream("/Users/zfleischman/ideas.txt");
+    FileInputStream fstream = new FileInputStream(fileName);
     BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
     String strLine;
     while ((strLine = br.readLine()) != null) {
