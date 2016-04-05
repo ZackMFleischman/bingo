@@ -62,7 +62,9 @@ void setup() {
     textFont(createFont("LucidaFax", 70));
     fill(255);
     text("Bingo!", 200, 70);
+    save("/Users/zfleischman/bango.png");
     
+    //System.exit(0);
     noLoop();
 }
 
